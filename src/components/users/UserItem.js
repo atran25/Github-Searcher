@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-function UserItem({ user: { login, avatar_url} }) {
+const UserItem = ({ user: { login, avatar_url} }) => {
     return (
         <div className="card shadow-lg compact side bg-base-100">
             <div className="flex-row items-center space-x-4 card-body">
@@ -16,7 +16,7 @@ function UserItem({ user: { login, avatar_url} }) {
             
                 <div>
                     <h2 className="card-title">{login}</h2>
-                    <Link className="text-base-content text-opacity-40" to={`/users/${login}`}>Visit Profile</Link>
+                    <Link className="text-base-content text-opacity-40" to={`/user/${login}`}>Visit Profile</Link>
                 </div>
             </div>
         </div>
